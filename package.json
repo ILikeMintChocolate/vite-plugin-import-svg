@@ -1,0 +1,39 @@
+{
+  "name": "vite-plugin-import-svg",
+  "version": "0.0.2",
+  "description": "Vite plugin to import SVG files",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build && shx cp src/index.d.ts dist/index.d.ts",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "vite",
+    "vite-plugin"
+  ],
+  "devDependencies": {
+    "@types/node": "^20.12.12",
+    "prettier": "3.2.5",
+    "shx": "^0.3.4",
+    "typescript": "^5.2.2"
+  },
+  "peerDependencies": {
+    "vite": "^5.2.0"
+  },
+  "dependencies": {
+    "@rollup/pluginutils": "^5.1.0"
+  }
+}
