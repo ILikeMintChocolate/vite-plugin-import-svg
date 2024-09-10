@@ -2,6 +2,10 @@
   "name": "vite-plugin-import-svg",
   "version": "0.1.1",
   "description": "Vite plugin to import SVG files",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ILikeMintChocolate/vite-plugin-import-svg.git"
+  },
   "license": "MIT",
   "type": "module",
   "main": "dist/index.js",
