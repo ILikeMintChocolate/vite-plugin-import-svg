@@ -28,7 +28,11 @@ You can import svg files as SVGElement format.
 ```js
 import icon from "./icon.svg?element"
 
+// Before version 0.0.4, use it like this:
 console.log(icon) // → <svg xmlns="http://www.w3.org/2000/svg">...</svg> as SVGElement
+
+// Starting from version 0.1.0, use it like this:
+console.log(icon()) // → <svg xmlns="http://www.w3.org/2000/svg">...</svg> as SVGElement
 ```
 
 If you're using Typescript, add the declaration code to ```vite-env.d.ts```
