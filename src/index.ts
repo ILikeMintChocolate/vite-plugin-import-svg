@@ -12,11 +12,11 @@ const vitePluginImportSvg = () => {
         const svgPath = id.replaceAll('?element', '')
         const svgCode = readFileSync(svgPath, 'utf-8')
         const result = `
-          const svgElement = new DOMParser().parseFromString(\`${svgCode}\`, 'image/svg+xml').documentElement
-
-          export default svgElement
+          export default function() {
+            const svgElement = new DOMParser().parseFromString(\`${svgCode}\`, 'image/svg+xml').documentElement
+            return svgElement
+          }
         `
-
         return result
       }
     }
